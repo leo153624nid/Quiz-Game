@@ -24,7 +24,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(
-                    destination: GameView(),
+                    destination: GameView().environmentObject(gameManager),
                     label: {
                         PrimaryButton(text: "Start")
                     })
