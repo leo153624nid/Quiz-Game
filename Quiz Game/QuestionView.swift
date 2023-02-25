@@ -10,7 +10,7 @@ import SwiftUI
 struct QuestionView: View {
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading, spacing: 40) {
             HStack {
                 Text("Qiuz Game")
                     .font(.title)
@@ -24,7 +24,16 @@ struct QuestionView: View {
                     .fontWeight(.heavy)
             }
             
+            ProgressBar(progress: 40)
             
+            VStack(alignment: .leading, spacing: 20) {
+                Text("What is the approximate value of mathematical constant e?")
+                    .font(.system(size: 20))
+                    .bold()
+                    .foregroundColor(Color("AccentColor"))
+                
+                
+            }
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
