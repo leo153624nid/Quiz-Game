@@ -17,6 +17,7 @@
 		FAC693F029AA06430065FE03 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693EF29AA06430065FE03 /* Answer.swift */; };
 		FAC693F429AA06F20065FE03 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F329AA06F20065FE03 /* AnswerRow.swift */; };
 		FAC693F729AA294C0065FE03 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F629AA294C0065FE03 /* GameView.swift */; };
+		FAC693FA29AA2B430065FE03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F929AA2B430065FE03 /* Game.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FAC693EF29AA06430065FE03 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 		FAC693F329AA06F20065FE03 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		FAC693F629AA294C0065FE03 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		FAC693F929AA2B430065FE03 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC693EF29AA06430065FE03 /* Answer.swift */,
+				FAC693F929AA2B430065FE03 /* Game.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC693E929A9FA930065FE03 /* QuestionView.swift in Sources */,
+				FAC693FA29AA2B430065FE03 /* Game.swift in Sources */,
 				FAC693E329A9F5BA0065FE03 /* PrimaryButton.swift in Sources */,
 				FAC693D429A9F2B90065FE03 /* ContentView.swift in Sources */,
 				FAC693F029AA06430065FE03 /* Answer.swift in Sources */,
