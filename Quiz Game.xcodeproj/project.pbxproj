@@ -14,6 +14,8 @@
 		FAC693E329A9F5BA0065FE03 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */; };
 		FAC693E929A9FA930065FE03 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693E829A9FA930065FE03 /* QuestionView.swift */; };
 		FAC693EC29A9FC3E0065FE03 /* ProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693EB29A9FC3E0065FE03 /* ProgressBar.swift */; };
+		FAC693F029AA06430065FE03 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693EF29AA06430065FE03 /* Answer.swift */; };
+		FAC693F429AA06F20065FE03 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F329AA06F20065FE03 /* AnswerRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		FAC693E829A9FA930065FE03 /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		FAC693EB29A9FC3E0065FE03 /* ProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressBar.swift; sourceTree = "<group>"; };
+		FAC693EF29AA06430065FE03 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		FAC693F329AA06F20065FE03 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 		FAC693D029A9F2B90065FE03 /* Quiz Game */ = {
 			isa = PBXGroup;
 			children = (
+				FAC693EE29AA061F0065FE03 /* Models */,
 				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
 				FAC693E629A9F7230065FE03 /* Views */,
 				FAC693E129A9F58A0065FE03 /* Components */,
@@ -81,6 +86,7 @@
 			children = (
 				FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */,
 				FAC693EB29A9FC3E0065FE03 /* ProgressBar.swift */,
+				FAC693F329AA06F20065FE03 /* AnswerRow.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -92,6 +98,14 @@
 				FAC693E829A9FA930065FE03 /* QuestionView.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		FAC693EE29AA061F0065FE03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAC693EF29AA06430065FE03 /* Answer.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +180,8 @@
 				FAC693E929A9FA930065FE03 /* QuestionView.swift in Sources */,
 				FAC693E329A9F5BA0065FE03 /* PrimaryButton.swift in Sources */,
 				FAC693D429A9F2B90065FE03 /* ContentView.swift in Sources */,
+				FAC693F029AA06430065FE03 /* Answer.swift in Sources */,
+				FAC693F429AA06F20065FE03 /* AnswerRow.swift in Sources */,
 				FAC693EC29A9FC3E0065FE03 /* ProgressBar.swift in Sources */,
 				FAC693D229A9F2B90065FE03 /* Quiz_GameApp.swift in Sources */,
 			);
