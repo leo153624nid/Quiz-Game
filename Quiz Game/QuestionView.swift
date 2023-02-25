@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
+    @EnvironmentObject var gameManager : GameManager
     
     var body: some View {
         VStack(alignment: .center, spacing: 40) {
@@ -19,22 +20,29 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text("1 from 10")
+                Text("\(gameManager.index + 1) out of \(gameManager.length)")
                     .foregroundColor(Color("AccentColor"))
                     .fontWeight(.heavy)
             }
             
-            ProgressBar(progress: 40)
+            ProgressBar(progress: gameManager.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text("What is the approximate value of mathematical constant e?")
+                Text(gameManager.question.string)
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(Color("AccentColor"))
                 
-                AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
+                ForEach(gameManager.answerChoices, id: \.id) { answer in
+                    AnswerRow(answer: answer)
+                        .environmentObject(gameManager)
+                    
+                }
                 
-                AnswerRow(answer: Answer(text: NSAttributedString(string: "222"), isCorrect: true))
+                AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
+                    .environmentObject(gameManager)
+                
+              
             }
             
             PrimaryButton(text: "Next")
@@ -50,5 +58,6 @@ struct QuestionView: View {
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
         QuestionView()
+            .environmentObject(GameManager(difficulty: .hard))
     }
 }
