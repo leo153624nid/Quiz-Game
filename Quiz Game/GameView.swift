@@ -16,10 +16,8 @@ struct GameView: View {
                 Text("Quiz Game")
                     .font(.title)
                     .fontWeight(.heavy)
-//                    .foregroundColor(Color("AccentColor"))
                 
                 Text("Твой счет: \(gameManager.score) из \(gameManager.length)")
-//                    .foregroundColor(Color("AccentColor"))
                 
                 Button(action: {
                     // todo
@@ -29,7 +27,7 @@ struct GameView: View {
             }
             .foregroundColor(Color("AccentColor"))
             .padding()
-            .frame(maxWidth: .infinity, minHeight: .infinity)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         } else {
             QuestionView()
