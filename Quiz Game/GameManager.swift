@@ -44,10 +44,10 @@ class GameManager: ObservableObject {
                 let decodedData = try decoder.decode(Game.self, from: data!)
                 
                 DispatchQueue.main.async {
-                    self.index = 0
-                    self.score = 0
-                    self.progress = 0
-                    self.endGame = false
+//                    self.index = 0
+//                    self.score = 0
+//                    self.progress = 0
+//                    self.endGame = false
                     self.game = decodedData.results
                     self.length = decodedData.results.count
                     self.setQuestion()
