@@ -11,6 +11,7 @@
 		FAC693D429A9F2B90065FE03 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693D329A9F2B90065FE03 /* ContentView.swift */; };
 		FAC693D629A9F2BA0065FE03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC693D529A9F2BA0065FE03 /* Assets.xcassets */; };
 		FAC693D929A9F2BA0065FE03 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC693D829A9F2BA0065FE03 /* Preview Assets.xcassets */; };
+		FAC693E329A9F5BA0065FE03 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		FAC693D529A9F2BA0065FE03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAC693D829A9F2BA0065FE03 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FAC693DA29A9F2BA0065FE03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
+				FAC693E129A9F58A0065FE03 /* Components */,
 				FAC693D329A9F2B90065FE03 /* ContentView.swift */,
 				FAC693D529A9F2BA0065FE03 /* Assets.xcassets */,
 				FAC693DA29A9F2BA0065FE03 /* Info.plist */,
@@ -67,6 +70,14 @@
 				FAC693D829A9F2BA0065FE03 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAC693E129A9F58A0065FE03 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */,
+			);
+			name = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAC693E329A9F5BA0065FE03 /* PrimaryButton.swift in Sources */,
 				FAC693D429A9F2B90065FE03 /* ContentView.swift in Sources */,
 				FAC693D229A9F2B90065FE03 /* Quiz_GameApp.swift in Sources */,
 			);
