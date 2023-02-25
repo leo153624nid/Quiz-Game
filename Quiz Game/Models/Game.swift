@@ -22,12 +22,15 @@ struct Game: Decodable {
         var incorrectAnswers: [String]
         
         var formattedQuestion: NSAttributedString {
-            do {
-                return NSAttributedString(string: question)
-            } catch {
-                print(error)
-                return NSAttributedString(string: "")
-            }
+            NSAttributedString(string: question)
+        }
+        
+        var answers: [Answer] {
+                let correct = [Answer(text: NSAttributedString(string: correctAnswer), isCorrect: true)]
+                let incorrects = incorrectAnswers.map {
+                    Answer(text: NSAttributedString(string: $0), isCorrect: false)
+                }
+                return (correct + incorrects).shuffled()
         }
     }
 }
