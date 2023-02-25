@@ -33,7 +33,7 @@ class GameManager: ObservableObject {
                 print(error.localizedDescription)
                 return
             }
-            guard (response as? HTTPURLResponse)?.statusCode == 200 else { print("Error while fething data")
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else { print("Error while fetching data")
                 return }
             guard data != nil else { print("No data"); return }
             
