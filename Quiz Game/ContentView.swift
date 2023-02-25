@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var gameManager = GameManager(difficulty: .hard) // todo
+    @State var section = 0
+
+    @StateObject var gameManager = GameManager()
+//    @StateObject var gameManager = GameManager(difficulty: .hard)
+    private let difficultyArray = ["Easy", "Medium", "Hard"]
     
     var body: some View {
         NavigationView {
@@ -24,20 +28,36 @@ struct ContentView: View {
                 }
                 
                 NavigationLink(
-                    destination: GameView().environmentObject(gameManager),
+                    destination: GameView()
+                        .environmentObject(gameManager),
                     label: {
                         PrimaryButton(text: "Start")
                     })
                     .navigationBarHidden(true)
-                    
-             
                 
+                Text("Выбранная сложность:\(section)")
+                    .foregroundColor(Color("AccentColor"))
+                
+//                Picker(selection: $section,
+//                       label: Text(""),
+//                       content: {
+//                        ForEach(difficultyArray, id: \.self, content: {
+//                            Text($0)
+//                                .foregroundColor(Color("AccentColor"))
+//                        })
+//                       }).frame(width: 100, height: 80)
+                Picker(selection: $section,
+                       label: Text("")) {
+                    ForEach(0..<difficultyArray.count) {
+                            Text(difficultyArray[$0])
+                                .foregroundColor(Color("AccentColor"))
+                        }
+                       }.frame(width: 100, height: 80)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .edgesIgnoringSafeArea(.all)
             .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
         }
-        
     }
 }
 
