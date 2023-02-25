@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct AnswerRow: View {
+    @EnvironmentObject var gameManager : GameManager
+    
     var answer: Answer
     
     @State private var isSelected = false
@@ -35,12 +37,16 @@ struct AnswerRow: View {
         }
         .padding()
         .frame(maxWidth: .infinity, alignment: .leading)
-        .foregroundColor(rowColor)
+        .foregroundColor(gameManager.answerSelected ? rowColor : Color("AccentColor"))
         .background(Color.white)
         .cornerRadius(10)
         .shadow(color: isSelected ? shadowColor : .gray, radius: 5, x: 0.5, y: 0.5)
         .onTapGesture {
-            isSelected = true
+            if !gameManager.answerSelected {
+                isSelected = true
+                gameManager.selectAnswer(answer: answer)
+            }
+            
         }
 
     }
@@ -49,5 +55,6 @@ struct AnswerRow: View {
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
         AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
+            .environmentObject(GameManager(difficulty: .hard))
     }
 }
