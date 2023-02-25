@@ -32,9 +32,9 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(Color("AccentColor"))
                 
-                AnswerRow(answer: Answer(text: "111", isCorrect: false))
+                AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
                 
-                AnswerRow(answer: Answer(text: "222", isCorrect: true))
+                AnswerRow(answer: Answer(text: NSAttributedString(string: "222"), isCorrect: true))
             }
             
             PrimaryButton(text: "Next")
