@@ -11,6 +11,7 @@ struct QuestionView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var body: some View {
+        // add spinner for wating loading
         VStack(alignment: .center, spacing: 40) {
             HStack {
                 Text("Qiuz Game")
@@ -36,7 +37,6 @@ struct QuestionView: View {
                 ForEach(gameManager.answerChoices, id: \.id) { answer in
                     AnswerRow(answer: answer)
                         .environmentObject(gameManager)
-                    
                 } 
             }
             
@@ -44,7 +44,6 @@ struct QuestionView: View {
                 gameManager.goToNextQuestion()
             }, label: {
                 PrimaryButton(text: "Next", background: gameManager.answerSelected ? Color("AccentColor") : .gray)
-                    
             })
             .disabled(!gameManager.answerSelected)
             
