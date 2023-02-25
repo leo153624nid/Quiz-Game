@@ -23,7 +23,7 @@ struct AnswerRow: View {
             Image(systemName: "circle.fill")
                 .font(.caption)
             
-            Text(answer.text)
+            Text(answer.text.string)
                 .bold()
             
             if isSelected {
@@ -48,6 +48,6 @@ struct AnswerRow: View {
 
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
-        AnswerRow(answer: Answer(text: "text", isCorrect: false))
+        AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
     }
 }
