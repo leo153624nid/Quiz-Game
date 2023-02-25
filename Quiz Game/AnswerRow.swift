@@ -52,6 +52,6 @@ struct AnswerRow: View {
 struct AnswerRow_Previews: PreviewProvider {
     static var previews: some View {
         AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
-            .environmentObject(GameManager(difficulty: .hard))
+            .environmentObject(GameManager())
     }
 }
