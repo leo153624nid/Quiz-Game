@@ -84,7 +84,6 @@ class GameManager: ObservableObject {
         
         if answer.isCorrect {
             score += 1
-            
         }
     }
 }
