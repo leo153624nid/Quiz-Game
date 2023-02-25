@@ -18,12 +18,18 @@ class GameManager: ObservableObject {
     @Published private(set) var answerChoices : [Answer] = []
     @Published private(set) var progress : CGFloat = 0
     @Published private(set) var score = 0
+    @Published var difficulty = Difficulty.easy
     
-    init(difficulty: Difficulty) {
-        fetchGame(with: difficulty)
-    }
+//    init(difficulty: Difficulty) {
+//        print(difficulty.rawValue)
+//        fetchGame(with: difficulty)
+//    }
     
-    func fetchGame(with difficulty: Difficulty) /* async */ {
+//    init() {
+//
+//    }
+    
+    func fetchGame() /* async */ {
         let urlString = "https://opentdb.com/api.php?amount=10&difficulty=\(difficulty)"
         guard let url = URL(string: urlString) else {fatalError("Missing URL")}
         let urlRequest = URLRequest(url: url)
@@ -44,13 +50,16 @@ class GameManager: ObservableObject {
                 let decodedData = try decoder.decode(Game.self, from: data!)
                 
                 DispatchQueue.main.async {
-//                    self.index = 0
-//                    self.score = 0
-//                    self.progress = 0
-//                    self.endGame = false
+                    self.index = 0
+                    self.score = 0
+                    self.progress = 0
+                    self.endGame = false
+                    self.difficulty = .easy
+                    
                     self.game = decodedData.results
                     self.length = decodedData.results.count
                     self.setQuestion()
+                    print("start")
                 }
             } catch {
                 print(error.localizedDescription)
