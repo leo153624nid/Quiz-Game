@@ -10,11 +10,8 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        
         VStack(spacing: 40) {
-            
             VStack(spacing: 20) {
-                
                 Text("Quiz Game")
                     .font(.title)
                     .fontWeight(.heavy)
