@@ -39,7 +39,6 @@ struct GameView: View {
                 .environmentObject(gameManager)
                 .onAppear(perform: {
                     setDifficulty()
-                    print("gameManager.difficulty = \(gameManager.difficulty.rawValue)")
                     gameManager.fetchGame()
                 })
         }  
@@ -52,6 +51,7 @@ struct GameView: View {
             case 2: gameManager.difficulty = .hard
             default: print("error setup difficulty")
         }
+        print("difficulty = \(gameManager.difficulty.rawValue)")
     }
 }
 
