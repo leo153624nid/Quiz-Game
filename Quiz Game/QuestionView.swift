@@ -28,7 +28,7 @@ struct QuestionView: View {
             ProgressBar(progress: gameManager.progress)
             
             VStack(alignment: .leading, spacing: 20) {
-                Text(gameManager.question.string)
+                Text(gameManager.question.string) // todo
                     .font(.system(size: 20))
                     .bold()
                     .foregroundColor(Color("AccentColor"))

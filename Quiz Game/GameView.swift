@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct GameView: View {
-//    @StateObject var gameManager : GameManager
-    @EnvironmentObject var gameManager : GameManager
+    @StateObject var gameManager = GameManager()
+    var difficulty: Int
+    
     @Environment(\.presentationMode) var presentation
     
     var body: some View {
@@ -36,12 +37,26 @@ struct GameView: View {
             QuestionView()
                 .navigationBarHidden(true)
                 .environmentObject(gameManager)
+                .onAppear(perform: {
+                    setDifficulty()
+                    print("gameManager.difficulty = \(gameManager.difficulty.rawValue)")
+                    gameManager.fetchGame()
+                })
         }  
+    }
+    
+    private func setDifficulty() {
+        switch difficulty {
+            case 0: gameManager.difficulty = .easy
+            case 1: gameManager.difficulty = .medium
+            case 2: gameManager.difficulty = .hard
+            default: print("error setup difficulty")
+        }
     }
 }
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(difficulty: 0)
     }
 }

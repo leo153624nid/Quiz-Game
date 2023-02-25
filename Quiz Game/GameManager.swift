@@ -14,20 +14,22 @@ class GameManager: ObservableObject {
     @Published private(set) var index = 0
     @Published private(set) var endGame = false
     @Published private(set) var answerSelected = false
-    @Published private(set) var question : NSAttributedString = NSAttributedString(string: "")
+    @Published private(set) var question : NSAttributedString = NSAttributedString(string: "") // todo
     @Published private(set) var answerChoices : [Answer] = []
     @Published private(set) var progress : CGFloat = 0
     @Published private(set) var score = 0
     @Published var difficulty = Difficulty.easy
     
-//    init(difficulty: Difficulty) {
-//        print(difficulty.rawValue)
-//        fetchGame(with: difficulty)
-//    }
-    
-//    init() {
-//
-//    }
+    func startNewGame() {
+        DispatchQueue.main.async {
+            self.index = 0
+            self.score = 0
+            self.progress = 0
+            self.endGame = false
+            self.difficulty = .easy
+            print("ready for new game")
+        }
+    }
     
     func fetchGame() /* async */ {
         let urlString = "https://opentdb.com/api.php?amount=10&difficulty=\(difficulty)"
@@ -50,16 +52,10 @@ class GameManager: ObservableObject {
                 let decodedData = try decoder.decode(Game.self, from: data!)
                 
                 DispatchQueue.main.async {
-                    self.index = 0
-                    self.score = 0
-                    self.progress = 0
-                    self.endGame = false
-                    self.difficulty = .easy
-                    
                     self.game = decodedData.results
                     self.length = decodedData.results.count
                     self.setQuestion()
-                    print("start")
+                    print("load sucsess")
                 }
             } catch {
                 print(error.localizedDescription)
