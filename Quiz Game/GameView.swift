@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameView: View {
     @EnvironmentObject var gameManager : GameManager
+    @Environment(\.presentationMode) var presentation
     
     var body: some View {
         if gameManager.endGame {
@@ -20,7 +21,7 @@ struct GameView: View {
                 Text("Твой счет: \(gameManager.score) из \(gameManager.length)")
                 
                 Button(action: {
-                    // todo
+                    self.presentation.wrappedValue.dismiss()
                 }, label: {
                     PrimaryButton(text: "Play again")
                 })
