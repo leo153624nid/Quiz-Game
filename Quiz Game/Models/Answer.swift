@@ -10,7 +10,7 @@ import SwiftUI
 
 struct Answer: Identifiable {
     var id = UUID()
-//    var text: NSAttributedString
-    var text: String
+    var text: NSAttributedString
+//    var text: String
     var isCorrect: Bool
 }
