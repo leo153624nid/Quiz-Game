@@ -19,8 +19,7 @@ struct AnswerRow: View {
         let picColor = answer.isCorrect ? Color.green : Color.red
         let rowColor = isSelected ? Color("AccentColor") : Color.gray
         let shadowColor = answer.isCorrect ? Color.green : Color.red
-        
-        
+               
         HStack(spacing: 20) {
             Image(systemName: "circle.fill")
                 .font(.caption)
@@ -46,9 +45,7 @@ struct AnswerRow: View {
                 isSelected = true
                 gameManager.selectAnswer(answer: answer)
             }
-            
         }
-
     }
 }
 
