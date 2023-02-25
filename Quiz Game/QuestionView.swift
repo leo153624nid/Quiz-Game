@@ -37,15 +37,16 @@ struct QuestionView: View {
                     AnswerRow(answer: answer)
                         .environmentObject(gameManager)
                     
-                }
-                
-                AnswerRow(answer: Answer(text: NSAttributedString(string: "111"), isCorrect: false))
-                    .environmentObject(gameManager)
-                
-              
+                } 
             }
             
-            PrimaryButton(text: "Next")
+            Button(action: {
+                gameManager.goToNextQuestion()
+            }, label: {
+                PrimaryButton(text: "Next", background: gameManager.answerSelected ? Color("AccentColor") : .gray)
+                    
+            })
+            .disabled(!gameManager.answerSelected)
             
             Spacer()
         }
