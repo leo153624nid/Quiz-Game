@@ -17,12 +17,13 @@ class GameManager: ObservableObject {
     @Published private(set) var question : NSAttributedString = NSAttributedString(string: "")
     @Published private(set) var answerChoices : [Answer] = []
     @Published private(set) var progress : CGFloat = 0
+    @Published private(set) var score = 0
     
-    init(difficulty: String) {
+    init(difficulty: Difficulty) {
         fetchGame(with: difficulty)
     }
     
-    func fetchGame(with difficulty: String) /* async */ {
+    func fetchGame(with difficulty: Difficulty) /* async */ {
         let urlString = "https://opentdb.com/api.php?amount=10&difficulty=\(difficulty)"
         guard let url = URL(string: urlString) else {fatalError("Missing URL")}
         let urlRequest = URLRequest(url: url)
@@ -45,6 +46,7 @@ class GameManager: ObservableObject {
                 for item in decodedData.results {
                     self.game.append(item)
                     self.length = self.game.count
+                    self.setQuestion()
                     print(self.length)
                 }
             } catch {
@@ -57,9 +59,35 @@ class GameManager: ObservableObject {
     func goToNextQuestion() {
         if index + 1 < length {
             index += 1
-            // set new question
+            setQuestion()
         } else {
             endGame = true
         }
     }
+    
+    func setQuestion() {
+        answerSelected = false
+        progress = CGFloat( Double(index + 1) / Double(length) * 350 ) // todo
+        
+        if index < length {
+            let currentGameQuestion = game[index]
+            question = currentGameQuestion.formattedQuestion
+            answerChoices = currentGameQuestion.answers
+        }
+    }
+    
+    func selectAnswer(answer: Answer) {
+        answerSelected = true
+        
+        if answer.isCorrect {
+            score += 1
+            
+        }
+    }
+}
+
+public enum Difficulty: String {
+    case hard
+    case medium
+    case easy
 }
