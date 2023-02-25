@@ -68,14 +68,14 @@
 		FAC693D029A9F2B90065FE03 /* Quiz Game */ = {
 			isa = PBXGroup;
 			children = (
+				FAC693FC29AA310E0065FE03 /* GameManager.swift */,
+				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
 				FAC693EE29AA061F0065FE03 /* Models */,
 				FAC693E129A9F58A0065FE03 /* Components */,
 				FAC693E629A9F7230065FE03 /* Views */,
-				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
 				FAC693D529A9F2BA0065FE03 /* Assets.xcassets */,
 				FAC693DA29A9F2BA0065FE03 /* Info.plist */,
 				FAC693D729A9F2BA0065FE03 /* Preview Content */,
-				FAC693FC29AA310E0065FE03 /* GameManager.swift */,
 			);
 			path = "Quiz Game";
 			sourceTree = "<group>";
