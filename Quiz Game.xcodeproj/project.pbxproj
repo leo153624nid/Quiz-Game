@@ -18,6 +18,7 @@
 		FAC693F429AA06F20065FE03 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F329AA06F20065FE03 /* AnswerRow.swift */; };
 		FAC693F729AA294C0065FE03 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F629AA294C0065FE03 /* GameView.swift */; };
 		FAC693FA29AA2B430065FE03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F929AA2B430065FE03 /* Game.swift */; };
+		FAC693FD29AA310E0065FE03 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693FC29AA310E0065FE03 /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FAC693F329AA06F20065FE03 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 		FAC693F629AA294C0065FE03 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FAC693F929AA2B430065FE03 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		FAC693FC29AA310E0065FE03 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,12 +69,13 @@
 			isa = PBXGroup;
 			children = (
 				FAC693EE29AA061F0065FE03 /* Models */,
-				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
-				FAC693E629A9F7230065FE03 /* Views */,
 				FAC693E129A9F58A0065FE03 /* Components */,
+				FAC693E629A9F7230065FE03 /* Views */,
+				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
 				FAC693D529A9F2BA0065FE03 /* Assets.xcassets */,
 				FAC693DA29A9F2BA0065FE03 /* Info.plist */,
 				FAC693D729A9F2BA0065FE03 /* Preview Content */,
+				FAC693FC29AA310E0065FE03 /* GameManager.swift */,
 			);
 			path = "Quiz Game";
 			sourceTree = "<group>";
@@ -192,6 +195,7 @@
 				FAC693EC29A9FC3E0065FE03 /* ProgressBar.swift in Sources */,
 				FAC693F729AA294C0065FE03 /* GameView.swift in Sources */,
 				FAC693D229A9F2B90065FE03 /* Quiz_GameApp.swift in Sources */,
+				FAC693FD29AA310E0065FE03 /* GameManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
