@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var gameManager = GameManager(difficulty: .hard) // todo
     
     var body: some View {
         NavigationView {
