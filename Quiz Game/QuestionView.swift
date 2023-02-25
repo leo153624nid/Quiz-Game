@@ -10,7 +10,7 @@ import SwiftUI
 struct QuestionView: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 40) {
+        VStack(alignment: .center, spacing: 40) {
             HStack {
                 Text("Qiuz Game")
                     .font(.title)
@@ -32,8 +32,14 @@ struct QuestionView: View {
                     .bold()
                     .foregroundColor(Color("AccentColor"))
                 
+                AnswerRow(answer: Answer(text: "111", isCorrect: false))
                 
+                AnswerRow(answer: Answer(text: "222", isCorrect: true))
             }
+            
+            PrimaryButton(text: "Next")
+            
+            Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
