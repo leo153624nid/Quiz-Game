@@ -8,6 +8,6 @@
 import Foundation
 import SwiftUI
 
-struct Constants {
+class Constants {
     static let progressBarWidth = UIScreen.main.bounds.width - 26
 }
