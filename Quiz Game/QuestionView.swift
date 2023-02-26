@@ -11,7 +11,7 @@ struct QuestionView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var body: some View {
-        VStack(alignment: .center, spacing: 40) {
+        VStack(spacing: 40) {
             HStack {
                 Text("Qiuz Game")
                     .font(.title)
@@ -24,8 +24,9 @@ struct QuestionView: View {
                     Text("\(gameManager.index + 1) out of \(gameManager.length)")
                         .foregroundColor(Color("AccentColor"))
                         .fontWeight(.heavy)
+                        .frame(width: 120, alignment: .trailing)
                 }
-            }
+            }.padding(.top)
             
             if gameManager.isFetching {
                 Spacer()
@@ -41,6 +42,8 @@ struct QuestionView: View {
                         .font(.system(size: 20))
                         .bold()
                         .foregroundColor(Color("AccentColor"))
+                        .lineLimit(8)
+                        .minimumScaleFactor(0.7)
                     
                     ForEach(gameManager.answerChoices, id: \.id) { answer in
                         AnswerRow(answer: answer)
@@ -60,7 +63,8 @@ struct QuestionView: View {
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(Color(red: 0.984313725490196, green: 0.9294117647058824, blue: 0.8470588235294118))
+        .background(Constants.backColor)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
