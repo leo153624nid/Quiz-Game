@@ -20,6 +20,7 @@
 		FAC693FA29AA2B430065FE03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F929AA2B430065FE03 /* Game.swift */; };
 		FAC693FD29AA310E0065FE03 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693FC29AA310E0065FE03 /* GameManager.swift */; };
 		FAC6940329AB470F0065FE03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6940229AB470F0065FE03 /* Constants.swift */; };
+		FAC6940729AB4DEC0065FE03 /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6940629AB4DEC0065FE03 /* Spinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FAC693F929AA2B430065FE03 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FAC693FC29AA310E0065FE03 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		FAC6940229AB470F0065FE03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FAC6940629AB4DEC0065FE03 /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				FAC693E229A9F5BA0065FE03 /* PrimaryButton.swift */,
 				FAC693EB29A9FC3E0065FE03 /* ProgressBar.swift */,
 				FAC693F329AA06F20065FE03 /* AnswerRow.swift */,
+				FAC6940629AB4DEC0065FE03 /* Spinner.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				FAC693D429A9F2B90065FE03 /* ContentView.swift in Sources */,
 				FAC693F029AA06430065FE03 /* Answer.swift in Sources */,
 				FAC693F429AA06F20065FE03 /* AnswerRow.swift in Sources */,
+				FAC6940729AB4DEC0065FE03 /* Spinner.swift in Sources */,
 				FAC693EC29A9FC3E0065FE03 /* ProgressBar.swift in Sources */,
 				FAC693F729AA294C0065FE03 /* GameView.swift in Sources */,
 				FAC693D229A9F2B90065FE03 /* Quiz_GameApp.swift in Sources */,
