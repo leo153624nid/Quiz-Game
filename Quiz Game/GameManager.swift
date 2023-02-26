@@ -19,6 +19,7 @@ class GameManager: ObservableObject {
     @Published private(set) var progress : CGFloat = 0
     @Published private(set) var score = 0
     @Published var difficulty = Difficulty.easy
+    @Published var isFetching = false
     
     func startNewGame() {
         DispatchQueue.main.async {
@@ -56,6 +57,7 @@ class GameManager: ObservableObject {
                     self.length = decodedData.results.count
                     self.setQuestion()
                     print("load sucsess")
+                    self.isFetching = false
                 }
             } catch {
                 print(error.localizedDescription)
