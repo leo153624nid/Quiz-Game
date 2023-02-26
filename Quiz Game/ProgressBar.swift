@@ -23,6 +23,7 @@ struct ProgressBar: View {
                 .foregroundColor(Color("AccentColor"))
                 .cornerRadius(3.0)
         }
+//        .padding(.horizontal, 4)
     }
 }
 

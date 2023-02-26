@@ -77,7 +77,7 @@ class GameManager: ObservableObject {
     
     func setQuestion() {
         answerSelected = false
-        progress = CGFloat( Double(index + 1) / Double(length) * Double(Constants.progressBarWidth) )
+        progress = CGFloat( Double(index + 1) / Double(length) * Double(Constants.progressBarWidth) - 6.00)
 
         if index < length {
             let currentGameQuestion = game[index]
