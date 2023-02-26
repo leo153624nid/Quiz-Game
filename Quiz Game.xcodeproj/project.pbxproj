@@ -19,6 +19,7 @@
 		FAC693F729AA294C0065FE03 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F629AA294C0065FE03 /* GameView.swift */; };
 		FAC693FA29AA2B430065FE03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693F929AA2B430065FE03 /* Game.swift */; };
 		FAC693FD29AA310E0065FE03 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC693FC29AA310E0065FE03 /* GameManager.swift */; };
+		FAC6940329AB470F0065FE03 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC6940229AB470F0065FE03 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FAC693F629AA294C0065FE03 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FAC693F929AA2B430065FE03 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		FAC693FC29AA310E0065FE03 /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		FAC6940229AB470F0065FE03 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 		FAC693D029A9F2B90065FE03 /* Quiz Game */ = {
 			isa = PBXGroup;
 			children = (
+				FAC6940129AB46FB0065FE03 /* Helpers */,
 				FAC693FC29AA310E0065FE03 /* GameManager.swift */,
 				FAC693D129A9F2B90065FE03 /* Quiz_GameApp.swift */,
 				FAC693EE29AA061F0065FE03 /* Models */,
@@ -115,6 +118,14 @@
 				FAC693F929AA2B430065FE03 /* Game.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		FAC6940129AB46FB0065FE03 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FAC6940229AB470F0065FE03 /* Constants.swift */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAC693E929A9FA930065FE03 /* QuestionView.swift in Sources */,
+				FAC6940329AB470F0065FE03 /* Constants.swift in Sources */,
 				FAC693FA29AA2B430065FE03 /* Game.swift in Sources */,
 				FAC693E329A9F5BA0065FE03 /* PrimaryButton.swift in Sources */,
 				FAC693D429A9F2B90065FE03 /* ContentView.swift in Sources */,
