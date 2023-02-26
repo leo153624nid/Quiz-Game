@@ -24,7 +24,7 @@ struct AnswerRow: View {
             Image(systemName: "circle.fill")
                 .font(.caption)
             
-            Text(answer.text.string)
+            Text(answer.text.string) // todo
                 .bold()
                 .lineLimit(4)
                 .minimumScaleFactor(0.6)

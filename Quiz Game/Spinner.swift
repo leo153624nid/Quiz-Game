@@ -9,7 +9,7 @@ import SwiftUI
 
 struct Spinner: View {
     var body: some View {
-        VStack(spacing: 20) {
+        VStack(spacing: 20) { // add spinner
             Text("Loading...")
                 .foregroundColor(.gray)
                 .fontWeight(.heavy)

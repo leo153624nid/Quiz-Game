@@ -14,7 +14,7 @@ class GameManager: ObservableObject {
     @Published private(set) var index = 0
     @Published private(set) var endGame = false
     @Published private(set) var answerSelected = false
-    @Published private(set) var question : NSAttributedString = NSAttributedString(string: "") // todo
+    @Published private(set) var question = NSAttributedString(string: "") // todo
     @Published private(set) var answerChoices : [Answer] = []
     @Published private(set) var progress : CGFloat = 0
     @Published private(set) var score = 0

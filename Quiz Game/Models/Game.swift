@@ -20,7 +20,9 @@ struct Game: Decodable {
         var question: String
         var correctAnswer: String
         var incorrectAnswers: [String]
-        
+        // Т.к. версия Xcode не позволяет использовать AttributedString(markdown:),
+        // то форматирование строки по факту не выполняется и сделан обратный перевод в строку без изменений
+        // Ищу способы решения этой проблемы ...
         var formattedQuestion: NSAttributedString {
             NSAttributedString(string: question)
         }
