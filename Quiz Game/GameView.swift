@@ -39,6 +39,7 @@ struct GameView: View {
                 .environmentObject(gameManager)
                 .onAppear(perform: {
                     setDifficulty()
+                    gameManager.isFetching = true
                     gameManager.fetchGame()
                 })
         }  
