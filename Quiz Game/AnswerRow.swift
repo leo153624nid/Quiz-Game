@@ -26,6 +26,8 @@ struct AnswerRow: View {
             
             Text(answer.text.string)
                 .bold()
+                .lineLimit(2)
+                .minimumScaleFactor(0.6)
             
             if isSelected {
                 Spacer()
