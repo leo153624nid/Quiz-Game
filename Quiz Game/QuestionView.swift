@@ -11,7 +11,6 @@ struct QuestionView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var body: some View {
-        // add spinner for wating loading
         VStack(alignment: .center, spacing: 40) {
             HStack {
                 Text("Qiuz Game")
@@ -21,33 +20,43 @@ struct QuestionView: View {
                 
                 Spacer()
                 
-                Text("\(gameManager.index + 1) out of \(gameManager.length)")
-                    .foregroundColor(Color("AccentColor"))
-                    .fontWeight(.heavy)
+                if !gameManager.isFetching {
+                    Text("\(gameManager.index + 1) out of \(gameManager.length)")
+                        .foregroundColor(Color("AccentColor"))
+                        .fontWeight(.heavy)
+                }
             }
             
-            ProgressBar(progress: gameManager.progress)
-            
-            VStack(alignment: .leading, spacing: 20) {
-                Text(gameManager.question.string) // todo
-                    .font(.system(size: 20))
-                    .bold()
-                    .foregroundColor(Color("AccentColor"))
+            if gameManager.isFetching {
+                Spacer()
                 
-                ForEach(gameManager.answerChoices, id: \.id) { answer in
-                    AnswerRow(answer: answer)
-                        .environmentObject(gameManager)
-                } 
-            }
-            
-            Button(action: {
-                gameManager.goToNextQuestion()
-            }, label: {
-                PrimaryButton(text: "Next", background: gameManager.answerSelected ? Color("AccentColor") : .gray)
-            })
-            .disabled(!gameManager.answerSelected)
-            
-            Spacer()
+                Spinner()
+                
+                Spacer()
+            } else {
+                ProgressBar(progress: gameManager.progress)
+                
+                VStack(alignment: .leading, spacing: 20) {
+                    Text(gameManager.question.string) // todo
+                        .font(.system(size: 20))
+                        .bold()
+                        .foregroundColor(Color("AccentColor"))
+                    
+                    ForEach(gameManager.answerChoices, id: \.id) { answer in
+                        AnswerRow(answer: answer)
+                            .environmentObject(gameManager)
+                    }
+                }
+                
+                Button(action: {
+                    gameManager.goToNextQuestion()
+                }, label: {
+                    PrimaryButton(text: "Next", background: gameManager.answerSelected ? Color("AccentColor") : .gray)
+                })
+                .disabled(!gameManager.answerSelected)
+                
+                Spacer()
+            }  
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
