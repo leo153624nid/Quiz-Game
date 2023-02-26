@@ -10,11 +10,6 @@ import SwiftUI
 struct Spinner: View {
     var body: some View {
         VStack(spacing: 20) {
-//            Text("Qiuz Game")
-//                .font(.title)
-//                .fontWeight(.heavy)
-//                .foregroundColor(Color("AccentColor"))
-            
             Text("Loading...")
                 .foregroundColor(.gray)
                 .fontWeight(.heavy)
